@@ -1,16 +1,23 @@
 function findNeighbors(node, matrix) {
-    let res = []
+    let neighborsArr = []
+    let row = node[0];
+    let column = node[1];
+
     // Up
+    if(row > 0)neighborsArr.push([row -1, column])
 
     // Down
+    if(row < matrix.length -1) neighborsArr.push([row +1, column ])
+
 
     // Left
-
+    if(column > 0) neighborsArr.push([row, column -1])
     // Right
+    if(column < matrix[0].length -1) neighborsArr.push([row, column +1])
 
     // Your code here
 
-    return res
+    return neighborsArr
 }
 
 
